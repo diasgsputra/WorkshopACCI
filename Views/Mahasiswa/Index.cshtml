@@ -1,0 +1,31 @@
+@model List<WorkshopASP.Models.Mahasiswa>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Daftar Mahasiswa</h2>
+
+        <a asp-action="Create" class="btn btn-primary btn-xs">Create Mahasiswa</a><br/><br/>
+        <table class="table table-striped">
+            <tr>
+                <th>Nim</th>
+                <th>Nama</th>
+                <th>IPK</th>
+                <th>Email</th>
+                <th></th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Nim</td>
+                    <td>@item.Nama</td>
+                    <td>@item.IPK</td>
+                    <td>@item.Email</td>
+                    <td><a asp-action="Update" asp-route-id="@item.Nim" class="btn btn-success btn-xs">update</a></td>
+                    <td><a asp-action="Delete" asp-route-id="@item.Nim" class="btn btn-danger btn-xs">delete</a></td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+

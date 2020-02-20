@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-6">
+        <h2>Create Mahasiswa</h2>
+        @Html.Raw(ViewBag.Pesan)
+        <form asp-action="Create">
+            <div class="form-group">
+                <label for="Nim">Nim :</label>
+                <input type="text" class="form-control" 
+                 placeholder="Enter Nim" name="Nim" />
+            </div>
+            <div class="form-group">
+                <label for="Nama">Nama :</label>
+                <input type="text" class="form-control" 
+                name="Nama" placeholder="Enter Nama" />
+            </div>
+             <div class="form-group">
+                <label for="IPK">IPK :</label>
+                <input type="text" class="form-control" 
+                name="IPK" placeholder="Enter IPK" />
+            </div>
+             <div class="form-group">
+                <label for="Email">Email :</label>
+                <input type="text" class="form-control" 
+                name="Email" placeholder="Enter Email" />
+            </div>
+            <button class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</div>

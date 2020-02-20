@@ -1,0 +1,33 @@
+@model WorkshopASP.Models.Mahasiswa
+
+
+<div class="row">
+    <div class="col-md-6">
+        @ViewBag.Error
+        <h2>Detail Mahasiswa</h2>
+
+        <form method="POST" asp-action="Update">
+            <div class="form-group">
+                <label for="Nim">Nim :</label>
+                <input type="text" class="form-control" 
+                    value="@Model.Nim" name="Nim" />
+            </div>
+            <div class="form-group">
+                <label for="Nama">Nama :</label>
+                <input type="text" class="form-control" 
+                name="Nama" value="@Model.Nama" />
+            </div>
+             <div class="form-group">
+                <label for="IPK">IPK :</label>
+                <input type="text" class="form-control" 
+                name="IPK" value="@Model.IPK" />
+            </div>
+             <div class="form-group">
+                <label for="Email">Email :</label>
+                <input type="text" class="form-control" 
+                name="Email" value="@Model.Email" />
+            </div>
+            <button class="btn btn-success" name="action">Update</button>
+        </form>
+    </div>
+</div>

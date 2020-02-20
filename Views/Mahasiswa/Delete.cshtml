@@ -1,0 +1,34 @@
+@model WorkshopASP.Models.Mahasiswa
+
+
+<div class="row">
+    <div class="col-md-6">
+        @ViewBag.Error
+        <h2>Delete Mahasiswa</h2>
+
+        <form method="POST" asp-action="Delete">
+            <input type="hidden" name="Nim" value="@Model.Nim" />
+            <div class="form-group">
+                <label for="Nim">Nim :</label>
+                <input type="text" class="form-control" 
+                    value="@Model.Nim" readonly="readonly" name="Nim" />
+            </div>
+            <div class="form-group">
+                <label for="Nama">Nama :</label>
+                <input type="text" class="form-control" 
+                name="Nama" readonly="readonly" value="@Model.Nama" />
+            </div>
+             <div class="form-group">
+                <label for="IPK">IPK :</label>
+                <input type="text" class="form-control" 
+                name="IPK" readonly="readonly" value="@Model.IPK" />
+            </div>
+             <div class="form-group">
+                <label for="Email">Email :</label>
+                <input type="text" class="form-control" 
+                name="Email" readonly="readonly" value="@Model.Email" />
+            </div>
+            <button class="btn btn-danger" name="action">Delete</button>
+        </form>
+    </div>
+</div>
